@@ -39,4 +39,4 @@ This section focuses on **R programming for bioinformatics**, particularly for s
 
 - Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/bioinformatics-learning.git
+   git clone https://github.com/dcrntn/omics.git
