@@ -1,0 +1,218 @@
+---
+title: "PTB1 Practice 1 — 30 Debugging Exercises"
+author: "__"
+output: html_document
+---
+
+# 🧩 Debugging Challenge (30 Exercises)
+
+Each exercise below contains **broken code**.  
+Your task: **Fix the code so it performs the described action correctly.**
+
+---
+
+## Part 1: Basics
+
+```{r ex1}
+# Fix the code below so it prints the sum of two numbers.
+a <- "4"
+b <- 2
+sum <- a + b
+```
+
+```{r ex2}
+# Fix the code below so it performs integer division and prints the quotient.
+11 / 3
+```
+
+```{r ex3}
+# Fix the code below so it calculates the square root of 25.
+sqroot <- sqrtx(25)
+```
+
+```{r ex4}
+# Fix the code below so it evaluates to TRUE when both conditions are true.
+TRUE &&| FALSE
+```
+
+---
+
+## Part 2: Strings
+
+```{r ex5}
+# Fix the code below so it concatenates two words into one sentence.
+paste("bioinfo")
+```
+
+```{r ex6}
+# Fix the code below so it extracts 'HEL' from the string 'HELLO'.
+substr("HELLO", 6, 10)
+```
+
+```{r ex7}
+# Fix the code below so it replaces all 'A' letters with 'T'.
+gsub("C", "T", "AACG")
+```
+
+```{r ex8}
+# Fix the code below so it prints the variable containing the string 'R'.
+name <- "R"
+print(language)
+```
+
+---
+
+## Part 3: Vectors
+
+```{r ex9}
+# Fix the code below so it calculates the mean while ignoring missing values.
+nums <- c(2, NA, 4, 6)
+mean(nums)
+```
+
+```{r ex10}
+# Fix the code below so it prints the third element of the vector.
+v <- c(10, 20, 30)
+v[4]
+```
+
+```{r ex11}
+# Fix the code below so it selects all numbers greater than 2.
+vals <- 1:5
+vals[vals > 10]
+```
+
+```{r ex12}
+# Fix the code below so it generates a sequence from 1 to 10 by twos.
+seq(1, 10, by = 2
+```
+
+---
+
+## Part 4: Lists and Functions
+
+```{r ex13}
+# Fix the code below so it prints the value of 'count' from the list.
+info <- list(name="A", count=5)
+info[name]
+```
+
+```{r ex14}
+# Fix the code below so the function adds two numbers and returns the result.
+add <- function(x, y) {
+  x + y
+```
+
+```{r ex15}
+# Fix the code below so the function multiplies two numbers correctly.
+multiply <- function(a, b) { a * b }
+multiply(2)
+```
+
+```{r ex16}
+# Fix the code below so the function squares the number 3.
+square <- function(x) { x * x )
+square(3)
+```
+
+---
+
+## Part 5: Data Frames
+
+```{r ex17}
+# Fix the code below so the data frame is created successfully with equal column lengths.
+df <- data.frame(id=1:3, val=c(5,6,7,8))
+```
+
+```{r ex18}
+# Fix the code below so it selects all rows where 'val' is greater than 5.
+subset(df, value > 5)
+```
+
+```{r ex19}
+# Fix the code below so it adds a new column that is the log of 'val'.
+df$new_col = lg(df$val)
+```
+
+```{r ex20}
+# Fix the code below so it calculates the mean of column 'a' while ignoring missing values.
+d <- data.frame(a=c(1,NA,3))
+mean(d$a)
+```
+
+---
+
+## Part 6: Loops and Conditions
+
+```{r ex21}
+# Fix the code below so it prints the numbers 1 to 5, one per line.
+for (i in 1:5) {
+print(i)
+  }
+```
+
+```{r ex22}
+# Fix the code below so the while loop prints numbers from 0 to 4 and then stops.
+i <- 0
+while (i < 5) {
+  print(i)
+}
+```
+
+```{r ex23}
+# Fix the code below so the loop stops when i equals 5.
+for (i in 1:10) {
+  if (i = 5) break
+}
+```
+
+---
+
+## Part 7: Visualization
+
+```{r ex24}
+# Fix the code below so it plots 'mpg' vs 'wt' using ggplot2.
+ggplot(mtcars, aes(x=mpg, y=wt)) + geom_point()
+```
+
+```{r ex25}
+# Fix the code below so it correctly maps 'cyl' to the y-axis.
+library(ggplot2)
+ggplot(mtcars, aes(x=mpg, y=cyls)) + geom_point()
+```
+
+```{r ex26}
+# Fix the code below so it draws a scatter plot using the correct geom function.
+ggplot(mtcars, aes(x=mpg, y=wt)) + geompoint()
+```
+
+---
+
+## Part 8: dplyr Analysis
+
+```{r ex27}
+# Fix the code below so it groups the data by 'cyl' and computes the mean 'mpg'.
+data(mtcars)
+mtcars %>% group_by(cyl) summarise(mean_mpg = mean(mpg))
+```
+
+```{r ex28}
+# Fix the code below so it groups the data by the correct column name.
+library(dplyr)
+mtcars %>% group_by(gearz) %>% summarise(mean_mpg = mean(mpg))
+```
+
+```{r ex29}
+# Fix the code below so it creates a summary column named 'mean_mpg' with the correct value.
+mtcars %>% summarise(mean_mpgs = mean(mpg))
+```
+
+```{r ex30}
+# Fix the code below so it correctly pipes the operations to compute the mean 'mpg' by 'cyl'.
+mtcars %>%> group_by(cyl) %>% summarise(mean_mpg = mean(mpg))
+```
+
+---
+
+# 💡 Tip
+Run each chunk and read the error carefully. Modify the code until it performs the described task.

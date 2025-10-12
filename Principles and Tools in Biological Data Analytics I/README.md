@@ -1,25 +1,42 @@
-# Exercise Notebook Guide
+# Welcome to the PTB1 sub in the OMICS repo
 
-This notebook contains exercises designed to reinforce the concepts from the lectures. Your primary tasks are **fixing errors** and **writing missing code solutions**.
-
----
-
-## 🛠 How to Run the Exercises
-
-Each exercise is structured with **two Code cells**. Please follow this two-step process for every exercise:
-
-1.  **Work in the Solution Cell:**
-    * Locate the first cell (the one containing the initial code or the blank space for your solution).
-    * Your only focus should be **fixing the errors** (syntax or logic) or **writing your complete solution** in this cell.
-    * **Run this cell first** to execute your corrected or newly written code.
-
-2.  **Verify with the Test & Solution Cell:**
-    * After running the first cell, run the second cell, typically labeled **Test & Solution**.
-    * This cell will check your output against the expected result and help you verify if your solution is correct. **Do not modify the code in this cell.**
+This folder focuses on programming mainly for the **Principles and Tools in Biological Data Analytics I** lecture. Howeve it does not cover everything it's just here so you guys might find something on it that helps you out with programming.
 
 ---
 
-## 💡 Key Advice for Success
+## 📁 Repository Structure
 
-* **Read the Description:** The most important step is to **always read the exercise description carefully**. Errors are not always simple syntax mistakes; sometimes the logic, formulas, or numbers used in the code are simply *wrong* according to the exercise's requirements.
-* **Solve for the Goal:** Ensure your code produces the output described in the exercise, even if the existing code looks structurally sound. The "error" might be a simple incorrect variable assignment or an off-by-one number.
+### 🧠 1. `Programming intro/`
+
+This folder introduces basic programming concepts using biological examples — ideal for absolute beginners. It doesn't cover everything that we went through during the lectures, however it **MIGHT** help some of you guys, to get the basics of programming and why we use/do specific concepts.
+
+
+---
+
+### 🐍 2. `Python/`
+Dive deeper into **Python for bioinformatics**.  
+This section covers both general Python programming and advanced applications.
+
+**Includes:**
+- Data structures and functions  
+- Object-Oriented Programming (OOP) in Bioinformatics  
+
+---
+
+### 📊 3. `R/`
+This section focuses on **R programming for bioinformatics**, particularly for statistical analysis and visualization.
+
+**Topics covered:**
+- R syntax and data types  
+- Data visualization with `ggplot2`  
+
+---
+
+## 🚀 Getting Started
+- You can download the files (in the semi-top-right corner).
+
+### *Alternatively, if you are familiar with git:*
+
+- Clone this repository:  
+   ```bash
+   git clone https://github.com/yourusername/bioinformatics-learning.git

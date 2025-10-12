@@ -1,0 +1,135 @@
+---
+title: "PTB1 Practice 1 — Guided Concepts"
+author: "__"
+output: html_document
+---
+
+# 🧭 Guided R Practice for Biological Data Analytics I
+
+This notebook introduces core R programming concepts with **working examples and explanations**.  
+Each section corresponds to a typical beginner exercise, but here the code is **correct and annotated** to help you understand what’s happening.
+
+---
+
+## 🧮 1. Basic Operations
+
+### Example 1: Arithmetic in R
+```{r}
+# R automatically treats numeric literals as doubles.
+a <- 5
+b <- 3
+sum_ab <- a + b
+sum_ab
+```
+**Explanation:** The `+` operator performs element-wise addition. Both `a` and `b` are numeric, so the result is `8`.
+
+### Example 2: Division and Modulo
+```{r}
+x <- 11
+y <- 3
+quotient <- x %/% y  # integer division
+remainder <- x %% y  # remainder
+quotient; remainder
+```
+**Explanation:** `%/%` returns how many whole times `y` fits into `x`, while `%%` gives the leftover part.
+
+---
+
+## 🧵 2. Strings and Text
+
+### Example 3: Concatenation
+```{r}
+first <- "Bio"
+second <- "informatics"
+phrase <- paste(first, second)
+phrase
+```
+**Explanation:** `paste()` joins strings with a space by default. Use `paste0()` to join without spaces.
+
+### Example 4: Substring Extraction
+```{r}
+dna <- "ACGT"
+substr(dna, 2, 3)
+```
+**Explanation:** `substr(x, start, stop)` extracts characters from index positions 2 to 3, returning `"CG"`.
+
+---
+
+## 📊 3. Vectors and Factors
+
+### Example 5: Creating and Summarizing Vectors
+```{r}
+nums <- c(2, 4, 6, 8, 10)
+mean(nums)
+sd(nums)
+```
+**Explanation:** Vectors are the core data structure in R. Functions like `mean()` and `sd()` compute statistics directly.
+
+### Example 6: Factors (Categorical Data)
+```{r}
+species <- factor(c("setosa", "versicolor", "virginica", "setosa"))
+table(species)
+```
+**Explanation:** Factors represent categorical variables and store both the data and the allowed levels.
+
+---
+
+## 📁 4. Data Frames
+
+### Example 7: Creating a Data Frame
+```{r}
+df <- data.frame(id = 1:4,
+                 species = c("setosa", "versicolor", "virginica", "setosa"),
+                 mass = c(5.1, 5.8, 6.3, 5.0))
+df
+```
+**Explanation:** A `data.frame` is like a spreadsheet—columns can be of different types.
+
+### Example 8: Filtering Rows
+```{r}
+subset(df, mass > 5.5)
+```
+**Explanation:** The `subset()` function filters rows based on logical conditions.
+
+---
+
+## 📈 5. Visualization with ggplot2
+
+### Example 9: Scatter Plot
+```{r, message=FALSE}
+# If ggplot2 is not installed uncomment the line below to install it. You need to do it once. After it's installed you can use a comment before it so it doesnt run again.
+# install.packages("ggplot2")
+library(ggplot2)
+ggplot(df, aes(x = id, y = mass, color = species)) +
+  geom_point(size = 3) +
+  labs(title = "Mass by ID", x = "ID", y = "Mass (g)")
+```
+**Explanation:** `ggplot2` uses a layered grammar of graphics. You start with `ggplot()`, define aesthetics, and add layers such as `geom_point()`.
+
+---
+
+## 🔍 6. Simple Grouped Analysis
+
+### Example 10: Summarize by Group
+```{r}
+# If ggplot2 is not installed uncomment the line below to install it. You need to do it once. After it's installed you can use a comment before it so it doesnt run again.
+# install.packages("dplyr")
+library(dplyr)
+df %>% 
+  group_by(species) %>% 
+  summarise(mean_mass = mean(mass))
+```
+**Explanation:** `group_by()` and `summarise()` are part of the `dplyr` grammar for aggregation.
+
+---
+
+# ✅ Summary
+
+This guided notebook reviewed key R concepts:
+- Basic math and logical operators  
+- String handling  
+- Vectors and data frames  
+- Factors and grouping  
+- Visualization using ggplot2  
+
+Now that you’ve seen the correct workflow, try the debugging version next!
